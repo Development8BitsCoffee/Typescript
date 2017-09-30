@@ -1,0 +1,3 @@
+interface IColumns {
+    data: string;
+}
