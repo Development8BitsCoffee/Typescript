@@ -1,4 +1,4 @@
-interface IAjaxProperties extends IAjaxMethods{
+interface ICallerProperties extends ICallerMethods{
     data?: any;
     async?: boolean;
     method?: string;

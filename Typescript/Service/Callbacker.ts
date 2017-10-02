@@ -7,7 +7,7 @@ class Callbacker{
         this.action = Callbacker.resolveUrl(url);
     }
 
-    private resolveOptions(options: IAjaxProperties): IAjaxProperties{
+    private resolveOptions(options: ICallerProperties): ICallerProperties{
         if (options.contentType == null) {
             options.contentType = "application/json";
         }
@@ -38,7 +38,7 @@ class Callbacker{
         return `${url}${action}`;
     } 
 
-    public send(options: IAjaxProperties): void{
+    public send(options: ICallerProperties): void{
         options = this.resolveOptions(options);
 
         $.ajax({
