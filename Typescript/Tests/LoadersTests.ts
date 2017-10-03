@@ -1,6 +1,12 @@
 class LoadersTests {
     private static readonly waitSeconds : number = 2500;
 
+    /**
+     * Put the window into a simple loading state.
+     * 
+     * @static
+     * @memberof LoadersTests
+     */
     public static TestWindowLoading(): void {
         UtilLoader.startLoadWindow();
         setTimeout(() => {
@@ -8,6 +14,13 @@ class LoadersTests {
         }, LoadersTests.waitSeconds);
     }
 
+    /**
+     * Set the window to a loading state.
+     * this example put's random texts (Arnie quotes) below the loading icon
+     * it desapears after 2500 seconds
+     * @static
+     * @memberof LoadersTests
+     */
     public static TestWindowLoadingRandomMessage(): void {
         var number = Math.floor((Math.random() * 5) + 1);
         var message = "";
@@ -39,6 +52,12 @@ class LoadersTests {
         }, LoadersTests.waitSeconds);
     }
 
+    /**
+     * Set the example select2 control to a loading state
+     * 
+     * @static
+     * @memberof LoadersTests
+     */
     public static TestSelect2Control(): void{
         var control = $("#loader_select2");
         UtilLoader.startLoadSelect2(control);

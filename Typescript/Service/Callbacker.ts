@@ -1,12 +1,31 @@
+
+/**
+ * 
+ * 
+ * @class Callbacker
+ */
 class Callbacker{
 
     public static readonly baseUrl:string = $("#appUrl").val();
     private action: string;
 
+    /**
+     * Creates an instance of Callbacker based on an url.
+     * @param {string} url 
+     * @memberof Callbacker
+     */
     constructor(url: string){
         this.action = Callbacker.resolveUrl(url);
     }
 
+    /**
+     * Gets a series of AJAX options and resolve them for the proper usage of this class
+     * 
+     * @private
+     * @param {ICallerProperties} options 
+     * @returns {ICallerProperties} 
+     * @memberof Callbacker
+     */
     private resolveOptions(options: ICallerProperties): ICallerProperties{
         return $.extend({}, {
             contentType: "application/json",
@@ -24,6 +43,14 @@ class Callbacker{
         }, options);
     }
 
+    /**
+     * Resolves the URL based on a hidden field called #appUrl
+     * 
+     * @static
+     * @param {string} action 
+     * @returns {string} 
+     * @memberof Callbacker
+     */
     public static resolveUrl(action: string): string {
         var url: string = Callbacker.baseUrl;
         if (!(url.indexOf('/', this.length - '/'.length) !== -1))
@@ -31,6 +58,12 @@ class Callbacker{
         return `${url}${action}`;
     } 
 
+    /**
+     * sends an AJAX request to a server.
+     * 
+     * @param {ICallerProperties} options 
+     * @memberof Callbacker
+     */
     public send(options: ICallerProperties): void{
         options = this.resolveOptions(options);
 

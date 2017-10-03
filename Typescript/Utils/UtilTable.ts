@@ -1,9 +1,25 @@
 class UtilTable {
 
+    /**
+     * Render a date input to the pt-BR format.
+     * 
+     * @static
+     * @memberof UtilTable
+     */
     public static renderDateFormat = (data, type, row) => {
         return moment(data).format("DD/MM/YYYY (HH:mm)");
     }
 
+    /**
+     * Handle a creation of a jQuery Datatable
+     * 
+     * @static
+     * @param {(string | JQuery)} initTable 
+     * @param {any[]} data 
+     * @param {TableColumnsModel} columns 
+     * @param {IDataTable} [options={}] 
+     * @memberof UtilTable
+     */
     public static drawDataTable(initTable: string | JQuery, data: any[],
         columns: TableColumnsModel,
         options: IDataTable = {}): void {
