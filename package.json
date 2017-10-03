@@ -1,20 +1,35 @@
 {
   "name": "8bitscoffee",
   "version": "1.0.0",
-  "description": "A set of typescript to help",
+  "description": "[Bootstrap readable-theme](https://bootswatch.com/readable/bootstrap.min.css)",
   "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-datepicker": "^1.7.1",
+    "bootstrap-iconpicker": "^1.8.2",
+    "datatables.net": "^1.10.16",
+    "jquery": "^3.2.1",
+    "font-awesome": "^4.7.0",
+    "linq": "^3.0.9",
+    "moment": "^2.18.1",
+    "select2": "^4.0.4",
+    "toastr": "^2.1.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Development8BitsCoffee/Typescript.git"
   },
   "keywords": [
     "Typescript"
   ],
-  "author": "Eduardo_Juliao",
+  "author": "Eduardo Julião",
   "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1",
-    "linq": "^3.0.8",
-    "toastr": "^2.1.2"
-  }
+  "bugs": {
+    "url": "https://github.com/Development8BitsCoffee/Typescript/issues"
+  },
+  "homepage": "https://github.com/Development8BitsCoffee/Typescript#readme"
 }

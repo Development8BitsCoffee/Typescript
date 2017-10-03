@@ -1,4 +1,4 @@
-class Loader{ 
+class UtilLoader{ 
 
     /**
      * Start a window loading
@@ -26,7 +26,10 @@ class Loader{
      */
     public static endLoadWindow(): void{
         $("body").removeClass("loading");
-        $("div.loadingmodal").remove();
+        var l = $("div.loadingmodal");
+        l.fadeOut("slow", () => {
+            l.remove();
+        });
     }
 
     /**
@@ -43,10 +46,13 @@ class Loader{
         }
 
         var tableId = table.attr("id");
+        var loaderId = `loading_${tableId}`;
+        if($(`#${loaderId}`).length > 0){ return; }
+
         var tableWrapper = table.closest("div:not(.dt-wrapper):not(.dataTables_wrapper)");
 
         tableWrapper.fadeOut();
-        $(`<div id="loading_${tableId}" class='text-center'>
+        $(`<div id="${loaderId}" class='text-center'>
                 <i class='${Properties.loadingIcon} fa-5x'></i><br/>
                 <span>${loadText}</span>
            </div>`).insertBefore(tableWrapper);
@@ -81,9 +87,11 @@ class Loader{
         }
 
         var selectId = select.attr("id");
+        var loaderId = `loading_${selectId}`;
+        if($(`i[name='${loaderId}']`).length > 0) {return;}
 
         select.prop("disabled", true);
-        $(`<i name='loading_${selectId}' class='${Properties.loadingIcon} text-primary'></i>`).insertBefore(select)
+        $(`<i name='${loaderId}' class='${Properties.loadingIcon} text-primary'></i>`).insertBefore(select)
     }
 
     /**

@@ -8,27 +8,20 @@ class Callbacker{
     }
 
     private resolveOptions(options: ICallerProperties): ICallerProperties{
-        if (options.contentType == null) {
-            options.contentType = "application/json";
-        }
-        if (options.method == null) {
-            options.method = "GET";
-        }
-        if (options.async == null) {
-            options.async = true;
-        }
-        if (options.error == null) {
-            options.error = (xhr: JQueryXHR, textStatus: string, errorThrown: string) => {
+        return $.extend({}, {
+            contentType: "application/json",
+            method: "GET",
+            async: true,
+            error: (xhr, textStatus, errorThrown) => {
                 if (xhr.responseJSON != null) {
                     toastr.error(xhr.responseJSON.ResponsePhrase);
-                } else {
+                }
+                else {
                     toastr.error("Não foi possível completar a sua requisição");
                     console.error(xhr);
                 }
-            };
-        }
-
-        return options;
+            }
+        }, options);
     }
 
     public static resolveUrl(action: string): string {

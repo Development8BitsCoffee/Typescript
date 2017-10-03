@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Showcase</title>
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-theme-readable.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/toastr/build/toastr.min.css">
+    <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+
+    <!-- 8Bits Coffee CSS -->
+    <link rel="stylesheet" href="../css/Loader.css">
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="http://8bitscoffee.com.br" target="_blank" class="navbar-brand">8Bits Coffee</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Anchors <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="themes">
+                            <li><a href="#banner">Home</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Loaders</li>
+                            <li><a href="#loader_window_link">Window</a></li>
+                            <li><a href="#loader_select_link">Select2</a></li>
+                            <li><a href="../cyborg/">Cyborg</a></li>
+                            <li><a href="../darkly/">Darkly</a></li>
+                            <li><a href="../flatly/">Flatly</a></li>
+                            <li><a href="../journal/">Journal</a></li>
+                            <li><a href="../lumen/">Lumen</a></li>
+                            <li><a href="../paper/">Paper</a></li>
+                            <li><a href="../readable/">Readable</a></li>
+                            <li><a href="../sandstone/">Sandstone</a></li>
+                            <li><a href="../simplex/">Simplex</a></li>
+                            <li><a href="../slate/">Slate</a></li>
+                            <li><a href="../solar/">Solar</a></li>
+                            <li><a href="../spacelab/">Spacelab</a></li>
+                            <li><a href="../superhero/">Superhero</a></li>
+                            <li><a href="../united/">United</a></li>
+                            <li><a href="../yeti/">Yeti</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <br/><br/>
+        <div class="page-header" id="banner">
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-sm-6">
+                    <h1><img src="../img/8bitsCoffee.png" alt="8Bits Coffee" width="48"> Welcome to 8Bits Coffee<small> <span clas="fa fa-coffee"></span></small></h1>
+                    <p class="lead">This is a small library of helpers for typescript that we found useful and, decided to share with everyone.</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2> Loaders</h2>
+                    <p><small>For this example, the loading closes after 2,5 seconds.</small></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" id="loader_window_link">
+                    <h3><i class="fa fa-link"></i>Window</h3>
+                    <p>Puts the window into a loading state</p>
+                </div>
+            </div>
+            <div class="row">
+                <a id="loaders_window" href="javascript:void();" class="btn btn-primary">
+                            Load for window
+                </a>
+
+                <a id="loaders_window_message" href="javascript:void();" class="btn btn-success">
+                                Load for window with message
+                </a>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-12" id="loader_select_link">
+                    <h3><i class="fa fa-link"></i>Select2</h3>
+                    <p>Puts a select2 controler into a loading state</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="">Your Control</label>
+                    <select class="form-control" id="loader_select2"></select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a id="loaders_select2_button" href="javascript:void();" class="btn btn-primary">
+                                Load control
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Base Javascript -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/toastr/build/toastr.min.js"></script>
+    <script src="../node_modules/linq/linq.min.js"></script>
+    <script src="../node_modules/moment/min/moment.min.js"></script>
+    <script src="../node_modules/select2/dist/js/select2.min.js"></script>
+    <script src="../node_modules/datatables.net/js/jquery.dataTables.js"></script>
+
+    <!-- 8Bits Coffee Javascript -->
+    <!-- Models -->
+    <script src="../Scripts/ts/Models/TableColumnsModel.js"></script>
+
+    <!-- Utils -->
+    <script src="../Scripts/ts/Properties.js"></script>
+    <script src="../Scripts/ts/Utils/UtilEnum.js"></script>
+    <script src="../Scripts/ts/Utils/UtilLoader.js"></script>
+    <script src="../Scripts/ts/Utils/UtilModal.js"></script>
+    <script src="../Scripts/ts/Utils/UtilSelect2.js"></script>
+    <script src="../Scripts/ts/Utils/UtilTable.js"></script>
+
+    <!-- Service -->
+    <script src="../Scripts/ts/Service/Callbacker.js"></script>
+
+    <!-- Tests -->
+    <script src="../Scripts/ts/Tests/LoadersTests.js"></script>
+
+    <script>
+        $(function () {
+            $("select").select2();
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-class TableHelper {
+class UtilTable {
 
     public static renderDateFormat = (data, type, row) => {
         return moment(data).format("DD/MM/YYYY (HH:mm)");
