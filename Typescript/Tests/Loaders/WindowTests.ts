@@ -1,6 +1,5 @@
-class LoadersTests {
-    private static readonly waitSeconds : number = 2500;
-
+class WindowTests{
+     
     /**
      * Put the window into a simple loading state.
      * 
@@ -11,7 +10,7 @@ class LoadersTests {
         UtilLoader.startLoadWindow();
         setTimeout(() => {
             UtilLoader.endLoadWindow();
-        }, LoadersTests.waitSeconds);
+        }, TestsProperties.waitSeconds);
     }
 
     /**
@@ -49,26 +48,11 @@ class LoadersTests {
         UtilLoader.startLoadWindow(message);
         setTimeout(() => {
             UtilLoader.endLoadWindow();
-        }, LoadersTests.waitSeconds);
-    }
-
-    /**
-     * Set the example select2 control to a loading state
-     * 
-     * @static
-     * @memberof LoadersTests
-     */
-    public static TestSelect2Control(): void{
-        var control = $("#loader_select2");
-        UtilLoader.startLoadSelect2(control);
-        setTimeout(() => {
-            UtilLoader.endLoadSelect2(control);
-        }, LoadersTests.waitSeconds);
+        }, TestsProperties.waitSeconds);
     }
 }
 
-$(() => {
-    $("#loaders_window").on("click", LoadersTests.TestWindowLoading);
-    $("#loaders_window_message").on("click", LoadersTests.TestWindowLoadingRandomMessage);
-    $("#loaders_select2_button").on("click",LoadersTests.TestSelect2Control);
+$(function() {
+    $("#loaders_window").on("click", WindowTests.TestWindowLoading);
+    $("#loaders_window_message").on("click", WindowTests.TestWindowLoadingRandomMessage);
 });
