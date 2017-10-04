@@ -15,6 +15,5 @@ class Select2Tests{
 }
 
 $(() => {
-    
     $("#loaders_select2_button").on("click",Select2Tests.TestSelect2Control);
 });
