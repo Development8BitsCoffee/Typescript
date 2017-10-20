@@ -49,6 +49,12 @@ interface IModalOptions{
      * @memberof IModalOptions
      */
     afterClose?: () =>void;
-    
+
+    /**
+     * Custom Buttons
+     * 
+     * @memberof IModalOptions
+     */
+    buttons?: JQuery[];
 
 }

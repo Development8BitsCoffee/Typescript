@@ -75,6 +75,18 @@ class UtilLoader{
     }
 
     /**
+     * 
+     * @param row JQuery or row Id
+     */
+    public static startLoadTableRow(row: string | JQuery) : void{
+        if(typeof row === "string"){
+            row = $(`${row}`);
+        }
+
+        row.hide();
+    }
+
+    /**
      * Initializes a Select2 loading
      * 
      * @static
