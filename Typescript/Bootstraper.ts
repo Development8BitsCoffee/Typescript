@@ -1,3 +1,4 @@
+import * as izitoast from 'iziToast';
 
 /**
  * Load every config
@@ -19,6 +20,7 @@ class Bootstraper {
 
     public boot(): void { 
         this.bootiziToast(); 
+        
     }
 
 }
